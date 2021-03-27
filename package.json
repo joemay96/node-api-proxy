@@ -1,0 +1,29 @@
+{
+  "name": "api-proxy",
+  "version": "1.0.0",
+  "description": "API Proxy for the NASA API",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/index.js"
+  },
+  "keywords": [
+    "nasa",
+    "api",
+    "nasa-api",
+    "rate-limit",
+    "securing-api-key",
+    "node-proxy"
+  ],
+  "author": "joemay96",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-rate-limit": "^5.2.6",
+    "express-slow-down": "^1.4.0",
+    "helmet": "^4.4.1",
+    "morgan": "^1.10.0"
+  }
+}
