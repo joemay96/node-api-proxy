@@ -31,9 +31,9 @@ let cachedData;
 let cachedTime;
 
 //Probably the last step is to provide own API-Keys
-const apiKeys = new Map();
+//const apiKeys = new Map();
 //creating own apiKey -> could and should be probably stored in memory
-apiKeys.set("12345", true);
+//apiKeys.set("12345", true);
 
 //using the limiter -> first the limiter and than the speedLimiter 
 router.get("/", limiter, speedLimiter, (req, res, next) => {
@@ -43,8 +43,10 @@ router.get("/", limiter, speedLimiter, (req, res, next) => {
         if(apiKeys.has(apiKey)){
             next();
         } else {
-            const error = new Error("Invalid API KEY");
-            next(error);
+            //not implementing any own api keys
+            next();
+            //const error = new Error("Invalid API KEY");
+            //next(error);
         }
     }, 
     //Putting the API-KEY middleware behind speed- and rate-limiter so that if someone bruteforcses api-keys it takes ages

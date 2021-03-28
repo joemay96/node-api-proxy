@@ -1,5 +1,4 @@
 FROM node:12
-MAINTAINER Josef Mayer <little.joe96@gmx.de>
 
 RUN mkdir -p /usr/mars-waether-api
 COPY . /usr/mars-waether-api
