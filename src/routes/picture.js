@@ -9,7 +9,7 @@ let cachedData;
 let cachedTime;
 
 router.get("/", async (req, res, next) => {
-    if(cachedTime && cachedTime > Date.now() - 8*60*60*1000) {
+    if(cachedTime && cachedTime > Date.now() - 60*60*1000) {
         return res.render("picture", {data: cachedData});
     }
     try {

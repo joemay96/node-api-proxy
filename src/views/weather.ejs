@@ -7,33 +7,33 @@
         For more information see <a href="https://api.nasa.gov/assets/insight/InSight%20Weather%20API%20Documentation.pdf">here</a>.
     </p>
 
-    <div class="has-text-right is-size-6 mr-6 mt-4">
-        <p><%= new Date(Date.now()).toDateString() %></p>
+    <div class="has-text-left is-size-6 ml-2 mt-4 mb-4">
+        <p class="date"><%= new Date(Date.now()).toDateString() %></p>
     </div>
 </div>
-<div class="container">
-        <% Object.keys(data).forEach(key => { %>
-            <% if((key == "sol_keys") || (key == "validity_checks")) { %>
-            <% } else { %>
-                <% Object.keys(data[key]).forEach(dataKey => { %>
-                    <p><%= %></p>
-                <% }) %>
-                <p class="is-size-5">Sol Key: <%= key %></p>
-                <p><span class="is-size-5 mr-1">First time of Sensor:</span> <%= data[key]["First_UTC"] %></p>
-                <p><span class="is-size-5 mr-1">Last time of Sensor: </span><%= data[key]["Last_UTC"] %></p>
-                <p><span class="is-size-5 mr-1">Month ordinal: </span><%= data[key]["Month_ordinal"] %></p>
-                <p><span class="is-size-5 mr-1">Season: </span><%= data[key]["Season"] %></p>
-                <p><span class="is-size-5 mr-1">Northern season: </span><%= data[key]["Northern_season"] %></p>
-                <p><span class="is-size-5 mr-1">Southern Season: </span><%= data[key]["Southern_Season"] %></p>
-                <div class="mt-4"></div>
-                <!--<p>Data:</p>-->
-                <%// Object.keys(data[key][dataKey]).forEach(pre => { %>
-                <!--    <p>Atmospheric pressure: <%// data[key]["Northern_season"] %></p>
-                    <p>Atmospheric pressure: <%// data[key]["Northern_season"] %></p>
-                    <p>Atmospheric pressure: <%// data[key]["Northern_season"] %></p>
-                    <p>Atmospheric pressure: <%// data[key]["Northern_season"] %></p> -->
-                <%// }) %>
-                
-            <% } %>
-         <% }); %>
+<div class="container has-text-centered">
+    <% Object.keys(data).forEach(key => { %>
+        <% if((key == "sol_keys") || (key == "validity_checks")) { %>
+        <% } else { %>
+            <% Object.keys(data[key]).forEach(dataKey => { %>
+                <p><%= %></p>
+            <% }) %>
+            <p class="is-size-5">Sol Key: <%= key %></p>
+            <p><span class="is-size-5 mr-1">First time of Sensor:</span> <%= data[key]["First_UTC"] %></p>
+            <p><span class="is-size-5 mr-1">Last time of Sensor: </span><%= data[key]["Last_UTC"] %></p>
+            <p><span class="is-size-5 mr-1">Month ordinal: </span><%= data[key]["Month_ordinal"] %></p>
+            <p><span class="is-size-5 mr-1">Season: </span><%= data[key]["Season"] %></p>
+            <p><span class="is-size-5 mr-1">Northern season: </span><%= data[key]["Northern_season"] %></p>
+            <p><span class="is-size-5 mr-1">Southern Season: </span><%= data[key]["Southern_Season"] %></p>
+            <div class="mt-6"></div>
+            <!--<p>Data:</p>-->
+            <%// Object.keys(data[key][dataKey]).forEach(pre => { %>
+            <!--    <p>Atmospheric pressure: <%// data[key]["Northern_season"] %></p>
+                <p>Atmospheric pressure: <%// data[key]["Northern_season"] %></p>
+                <p>Atmospheric pressure: <%// data[key]["Northern_season"] %></p>
+                <p>Atmospheric pressure: <%// data[key]["Northern_season"] %></p> -->
+            <%// }) %>
+            
+        <% } %>
+     <% }); %>
 </div>

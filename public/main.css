@@ -41,3 +41,13 @@ img {
 .sixty {
     width: 60%;
 }
+
+.date {
+    color: blue;
+}
+
+@media screen and (max-width: 1023px){
+    .sixty {
+        width: 90%;
+    }
+}
