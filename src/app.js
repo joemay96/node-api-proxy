@@ -32,7 +32,7 @@ app.use(express.json());
 
 app.get("/", (req,res) => {
     res.render("home",{
-        message: "This Site has some information and uses the Nasa API to show some nice pictures from Space and has some interesting Info foor you to look at :)",
+        message: "This site uses the Nasa API. The picture of the day is a nice way to get some information about space and have a nice picture for every day to look at. Also you can look at the mars weather if you want to :)",
     })
 })
 

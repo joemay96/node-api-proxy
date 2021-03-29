@@ -10,14 +10,14 @@ const slowDown = require("express-slow-down");//Prevents people from spaming you
 
 //If you overcome the rate limit you get a 429 which is to many requests
 const limiter = rateLimit({
-    windowMs: 30 * 1000, //30 seconds
-    max: 10, // limit each IP to 10 requests per windowMs -> max 10 Requests every 30 seconds
+    windowMs: 10*60 * 1000, //30 seconds
+    max: 100, // limit each IP to 10 requests per windowMs -> max 10 Requests every 30 seconds
 })
 
 const speedLimiter = slowDown({
-    windowMs: 30 * 1000,
-    delayAfter: 1, // after the first request we will 
-    delayMs: 500, //delay every request by 500ms
+    windowMs: 10 *60 * 1000,
+    delayAfter: 40, // after the first request we will 
+    delayMs: 100, //delay every request by 500ms
 })
 
 
